@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+/* CrestMart theme: Crestline blue on deep navy, with a warm amber accent for deals. */
+@theme {
+  --color-brand-50: #eaf6ff;
+  --color-brand-100: #d2ecff;
+  --color-brand-200: #a8daff;
+  --color-brand-300: #6cc3ff;
+  --color-brand-400: #33a9ff;
+  --color-brand-500: #0e8df7;
+  --color-brand-600: #0873dc;
+  --color-brand-700: #0a5db3;
+  --color-brand-800: #0d4d91;
+  --color-brand-900: #0f3f75;
+
+  --color-night-950: #060c18;
+  --color-night-900: #0a1424;
+  --color-night-800: #0f1d33;
+  --color-night-700: #1a2c47;
+  --color-night-600: #26405f;
+
+  --color-deal-400: #fbbf24;
+  --color-deal-500: #f59e0b;
+  --color-mint-400: #34d8a8;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Outfit', system-ui, sans-serif;
+}
+
+@layer base {
+  html { color-scheme: dark; }
+  body {
+    background: var(--color-night-950);
+    color: #e2e8f0;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.01em; }
+  :focus-visible { outline: 2px solid var(--color-brand-400); outline-offset: 2px; }
+}
+
+.crest-glow {
+  background:
+    radial-gradient(60rem 30rem at 90% -10%, rgba(14, 141, 247, 0.2), transparent 60%),
+    radial-gradient(40rem 24rem at -10% 110%, rgba(245, 158, 11, 0.08), transparent 60%);
+}
